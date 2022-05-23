@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    p Add tender page
+    form
+        div(class="form-group")
+            label(for="disabledTextInput")="Name tender"
+            input(type="text", id="disabledTextInput", class="form-control", placeholder="Input name tender")
+
+        div(class="form-group")
+            label(for="disabledTextInput")="Name tender customer"
+            input(type="text", id="disabledTextInput", class="form-control", placeholder="Input name tender customer")
+
+        div(class="form-group")
+            label(for="exampleFormControlTextarea1")="Description of the tender"
+            textarea(class="form-control" id="exampleFormControlTextarea1" rows="3")
+
+        //Дата и время начала и конца участия (<input type="datetime">)
+
+        label(for="disabledTextInput")="Maximum project price"
+        div(class="input-group mb-3")
+            div(class="input-group-prepend")
+                span(class="input-group-text")="$"
+            input(type="text" class="form-control" aria-label="Amount (to the nearest dollar)")
+
+        div(class="col-auto my-1")
+            button(type="submit" class="btn btn-primary")="Submit"
