@@ -1,7 +1,7 @@
-import { Sequelize, Model, DataTypes } from 'sequelize';
+import { DataTypes } from 'sequelize';
 
 
-const sequelize = new Sequelize('sqlite::memory:');
+const sequelize = require("./database");
 
 const Card = sequelize.define('Card', {
     id: {type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true},
@@ -10,5 +10,7 @@ const Card = sequelize.define('Card', {
     description: {type: DataTypes.TEXT, allowNull: false},
     start: {type: DataTypes.DATE, defaultValue: DataTypes.NOW},
     finish: {type: DataTypes.DATE, allowNull: false},
-    price: {type: DataTypes.INTEGER, allowNull: false}
+    price: {type: DataTypes.INTEGER, allowNull: false},
 });
+
+module.exports = Card;
