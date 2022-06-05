@@ -2,21 +2,21 @@ extends layout
 
 block content
     p(class="p-3")="Add tender page"
-    form
+    form(method="POST")
         //Name tender
         div(class="form-group")
             label(for="nameTender")="Name tender"
-            input(type="text", id="nameTender", class="form-control", placeholder="Input name tender")
+            input(type="text", id="nameTender", class="form-control", placeholder="Input name tender", name="nameTender")
 
         //Name tender customer
         div(class="form-group")
             label(for="nameCustomer")="Name tender customer"
-            input(type="text", id="nameCustomer", class="form-control", placeholder="Input name tender customer")
+            input(type="text", id="nameCustomer", class="form-control", placeholder="Input name tender customer", name="nameCustomer")
 
         //Description
         div(class="form-group")
             label(for="exampleFormControlTextarea1")="Description of the tender"
-            textarea(class="form-control" id="exampleFormControlTextarea1" rows="3")
+            textarea(class="form-control" id="exampleFormControlTextarea1" rows="3", name="Description")
 
         //date and time start and finish tender
         label(for="start" class="pr-3")="Enter a date and time for your tender started:"
@@ -31,7 +31,7 @@ block content
             div(class="input-group mb-3")
                 div(class="input-group-prepend")
                     span(class="input-group-text")="$"
-                input(type="text" class="form-control" aria-label="Amount (to the nearest dollar)")
+                input(type="text" class="form-control" aria-label="Amount (to the nearest dollar)", name="Price")
 
         div(class="col-auto my-1")
             button(type="submit" class="btn btn-primary")="Submit"

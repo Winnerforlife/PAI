@@ -1,15 +1,17 @@
 /**
  * Import Sequelize.
  */
-import { Sequelize } from 'sequelize';
-
+//import { Sequelize } from 'sequelize';
+const Sequelize = require("sequelize");
 /**
  * Create a Sequelize instance. This can be done by passing
  * the connection parameters separately to the Sequelize constructor.
  */
-const sequelize = new Sequelize('piPAI', 'root', null, {
+const sequelize = new Sequelize('piPAI', 'root', 'Zt,fkvtyzcjcfkb2022', {
+    host: "127.0.0.1",
     dialect: 'mysql'
-})
+});
+
 
 /**
  * Export the Sequelize instance. This instance can now be
